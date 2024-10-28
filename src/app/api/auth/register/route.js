@@ -14,7 +14,7 @@ export async function POST(request) {
         });
     } catch (error) {
         console.error('Registration failed:', error);
-        return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
+        return new Response(JSON.stringify({ error: 'User Already Exist' }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' },
         });
